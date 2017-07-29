@@ -1,0 +1,51 @@
+{
+    "menuList":[
+        {
+            "routerName":"index",
+            "name":"首页",
+            "list": [
+                {
+                    "title": "首页预览",
+                    "list": [
+                        {
+                            "router": "console",
+                            "name": "首页预览"
+                        }
+                    ]
+                },
+                {
+                    "title": "用户管理",
+                    "list": [
+                        {
+                            "router": "teacher",
+                            "name": "教师管理"
+                        },
+                        {
+                            "router": "student",
+                            "name": "学生管理"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "routerName":"cloud",
+            "name":"云教室",            
+            "list": [
+                {
+                    "title": "云教室",
+                    "list": [
+                        {
+                            "router": "one",
+                            "name": "一对一"
+                        },
+                        {
+                            "router": "more",
+                            "name": "一对多"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

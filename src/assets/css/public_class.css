@@ -1,0 +1,53 @@
+.console-title {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc; }
+  .console-title span {
+    font-size: 20px; }
+  .console-title a {
+    color: #00aaff;
+    margin-right: 15px; }
+
+.console-line-1 {
+  line-height: 24px;
+  height: 24px;
+  display: block; }
+
+.console-line-2 {
+  line-height: 32px;
+  height: 32px;
+  display: block; }
+
+.console-line-3 {
+  line-height: 40px;
+  height: 40px;
+  display: block; }
+
+.console-line-3 {
+  line-height: 60px;
+  height: 60px;
+  display: block; }
+
+.console-color {
+  color: #00aaff; }
+
+.console-icon {
+  float: left;
+  width: 20%;
+  height: 100px;
+  margin: 20px 0;
+  text-align: center; }
+  .console-icon a {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    text-align: center;
+    vertical-align: middle; }
+
+a {
+  cursor: pointer; }
+
+/*# sourceMappingURL=public_class.css.map */

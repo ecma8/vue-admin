@@ -1,0 +1,82 @@
+.logo {
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+  line-height: 100px; }
+  .logo .left {
+    width: 50%;
+    height: 100px;
+    text-align: left;
+    float: left;
+    font-size: 36px; }
+    .logo .left img {
+      height: 60%;
+      float: left;
+      margin-top: 20px; }
+  .logo .right {
+    width: 50%;
+    height: 100px;
+    text-align: right;
+    float: left; }
+
+.nav {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #eee; }
+  .nav ul {
+    margin: 0 auto;
+    height: 100%;
+    background: #e3e3e3; }
+    .nav ul a {
+      width: auto;
+      height: 100%;
+      float: left;
+      transition: all 0.3s ease;
+      padding: 0 30px; }
+    .nav ul li {
+      width: auto;
+      height: 50px;
+      line-height: 50px;
+      float: left;
+      font-size: 16px;
+      transition: all 0.3s ease; }
+      .nav ul li .nav-a {
+        background: #00aaff;
+        color: #fff; }
+    .nav ul a:hover {
+      background: #00aaff;
+      color: #fff; }
+
+footer {
+  width: 100%;
+  background: #fff;
+  margin: 0 auto; }
+
+.content-us {
+  width: 1200px;
+  padding: 10px 0 30px;
+  line-height: 14px;
+  margin: 0 auto;
+  text-align: center; }
+  .content-us ul li {
+    width: 100px;
+    padding: 0px;
+    text-align: center;
+    display: inline-block;
+    transition: all 1s ease; }
+  .content-us ul a:hover li {
+    color: #00aaff; }
+
+.host {
+  width: 1200px;
+  margin: 0 auto;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  font-size: 12px; }
+  .host a {
+    font-size: 12px; }
+
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,57 @@
+.content {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  bottom: 0px;
+  background: #eee;
+  z-index: 100; }
+  .content li h5 {
+    overflow: hidden;
+    color: #fff;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    background: #42485B; }
+  .content li h5:hover {
+    background: #00aaff; }
+
+.content-left-nav {
+  float: left;
+  width: 180px;
+  display: block;
+  position: fixed;
+  top: 50px;
+  bottom: 0px;
+  background-color: #333744;
+  z-index: 102;
+  overflow-x: hidden; }
+  .content-left-nav dl {
+    background: #333744; }
+    .content-left-nav dl dd {
+      height: 40px;
+      line-height: 40px; }
+      .content-left-nav dl dd a {
+        padding-left: 20px;
+        color: #ccc;
+        width: 100%;
+        height: 100%;
+        display: block; }
+    .content-left-nav dl dd:hover {
+      background: #4A5064; }
+
+.content-right-inner {
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 180px;
+  bottom: 0;
+  right: 0;
+  padding: 16px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #FFF; }
+
+/*# sourceMappingURL=content.css.map */
