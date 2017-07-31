@@ -1,6 +1,9 @@
 <template>
     <div class="row">
-        <div class="form-inline console-line-3">
+        <div class="console-child-title">
+            <span>教师管理</span>
+        </div>
+        <div class="form-inline console-form-title">
             <div class="form-group pull-left">
                 <select name="" id="" class="form-control">
                     <option value="">姓名</option>

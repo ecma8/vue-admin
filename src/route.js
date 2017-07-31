@@ -10,6 +10,7 @@ import SideBar from './components/Public/SideBar.vue';
 import Student from './components/Index/Student.vue';
 import Teacher from './components/Index/Teacher.vue';
 import TeacherEdit from './components/Index/TeacherEdit.vue';
+import TeacherAdd from './components/Index/TeacherAdd.vue';
 import Console from './components/Index/Console.vue';
 
 import One from './components/Cloud/One.vue';
@@ -53,7 +54,7 @@ export default new VueRouter({
                     {
                         path: 'teacher/add',
                         name:'teacherAdd',
-                        component: TeacherEdit
+                        component: TeacherAdd
                     }
                 ]
             },

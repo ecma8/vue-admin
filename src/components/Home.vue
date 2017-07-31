@@ -27,9 +27,6 @@ export default {
 	}
 }
 </script>
-<style rel="stylesheet/scss" lang="scss">
-	@import '../assets/css/public.css';
-	@import '../assets/css/base.scss';
-	@import '../assets/css/header.scss';
-	@import '../assets/css/public_class.scss';
+<style>
+	@import '../assets/css/index.css';
 </style>

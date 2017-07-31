@@ -47,7 +47,31 @@
     text-align: center;
     vertical-align: middle; }
 
+.console-message {
+  color: #ccc; }
+
 a {
   cursor: pointer; }
+
+.upload-head {
+  width: 100px;
+  height: 100px;
+  position: relative; }
+  .upload-head input[type=file] {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 100;
+    cursor: pointer;
+    opacity: 0; }
+  .upload-head img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 99; }
 
 /*# sourceMappingURL=public_class.css.map */

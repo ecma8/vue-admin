@@ -15,10 +15,6 @@
         </div>
     </div>
 </template>
-<style lang="scss" scope>
-    @import '../../assets/css/content.css';
-
-</style>
 <script>
     import json from '../../menu.json';
     export default {
