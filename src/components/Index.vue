@@ -32,7 +32,6 @@
             var that=this;
             this.$watch('message', function(newVal, oldVal){
                 that.id=newVal;
-                console.log(that.id);
             });
         },
         props:['message']

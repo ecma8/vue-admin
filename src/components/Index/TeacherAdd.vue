@@ -137,9 +137,13 @@
                 }
             }
         },
+        watch:{
+            'form.name'(val){
+                this.form.nickName=val
+            }
+        },
         methods:{
             check(data){
-
                 if(data.pattern.test(data.value)){
 
                     this.status[data.name]=true;
@@ -168,7 +172,7 @@
             },
             submit(){
                 for(let i in this.status){
-                    if(this.status[i]==false){
+                    if(this.status[i]===false){
                         this.submitStatus=false;
                         break;
                     }else{

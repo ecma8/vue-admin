@@ -55,6 +55,9 @@
                 </tr>
             </tbody>
         </table>
+        <input type="button" @click="add" value="增加">
+        <input type="button" @click="del" value="增加">
+        <div>现在数字为 {{count}}</div>
         <div class="page">
             <nav aria-label="Page navigation">
                 <ul class="pagination">
@@ -80,7 +83,10 @@
     </div>
 </template>
 <script>
+    import {mapGetters,mapActions} from 'vuex';
+
     export default{
+
         data(){
             return {
                 list:[
@@ -107,7 +113,11 @@
                 ]
             }
         },
+        computed:mapGetters([
+            'count'
+        ]),
         methods:{
+            ...mapActions(['add','del']),
             delTeacher(index,id){
                 if(confirm('确定要删除么')){
                     this.list.splice(index,1);

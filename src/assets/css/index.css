@@ -3,91 +3,110 @@ body, html, input, p, img, tr, td, ul, li, dl, dd, dt, h1, h2, h3, h4, h5, h6, d
   margin: 0;
   padding: 0;
   list-style-type: none;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
-  background: #f5f5f5; }
+  background: #f5f5f5;
+}
 
 * {
-  font-family: "Microsoft YaHei" !important; }
+  font-family: "Microsoft YaHei" !important;
+}
 
 a {
   list-style: none;
   text-decoration: none;
-  color: #666; }
+  color: #666;
+}
 
 a:hover {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .logo {
   width: 1200px;
   height: 100px;
   margin: 0 auto;
-  line-height: 100px; }
-  .logo .left {
-    width: 50%;
-    height: 100px;
-    text-align: left;
-    float: left;
-    font-size: 36px; }
-    .logo .left img {
-      height: 60%;
-      float: left;
-      margin-top: 20px; }
-  .logo .right {
-    width: 50%;
-    height: 100px;
-    text-align: right;
-    float: left; }
+  line-height: 100px;
+}
+.logo .left {
+  width: 50%;
+  height: 100px;
+  text-align: left;
+  float: left;
+  font-size: 36px;
+}
+.logo .left img {
+  height: 60%;
+  float: left;
+  margin-top: 20px;
+}
+.logo .right {
+  width: 50%;
+  height: 100px;
+  text-align: right;
+  float: left;
+}
 
 .nav {
   width: 100%;
   height: 50px;
   line-height: 50px;
-  background: #eee; }
-  .nav ul {
-    margin: 0 auto;
-    height: 100%;
-    background: #e3e3e3; }
-    .nav ul a {
-      width: auto;
-      height: 100%;
-      float: left;
-      transition: all 0.3s ease;
-      padding: 0 30px; }
-    .nav ul li {
-      width: auto;
-      height: 50px;
-      line-height: 50px;
-      float: left;
-      font-size: 16px;
-      transition: all 0.3s ease; }
-      .nav ul li .nav-a {
-        background: #00aaff;
-        color: #fff; }
-    .nav ul a:hover {
-      background: #00aaff;
-      color: #fff; }
+  background: #eee;
+}
+.nav ul {
+  margin: 0 auto;
+  height: 100%;
+  background: #e3e3e3;
+}
+.nav ul a {
+  width: auto;
+  height: 100%;
+  float: left;
+  transition: all 0.3s ease;
+  padding: 0 30px;
+}
+.nav ul li {
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.nav ul li .nav-a {
+  background: #00aaff;
+  color: #fff;
+}
+.nav ul a:hover {
+  background: #00aaff;
+  color: #fff;
+}
 
 footer {
   width: 100%;
   background: #fff;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .content-us {
   width: 1200px;
   padding: 10px 0 30px;
   line-height: 14px;
   margin: 0 auto;
-  text-align: center; }
-  .content-us ul li {
-    width: 100px;
-    padding: 0px;
-    text-align: center;
-    display: inline-block;
-    transition: all 1s ease; }
-  .content-us ul a:hover li {
-    color: #00aaff; }
+  text-align: center;
+}
+.content-us ul li {
+  width: 100px;
+  padding: 0px;
+  text-align: center;
+  display: inline-block;
+  transition: all 1s ease;
+}
+.content-us ul a:hover li {
+  color: #00aaff;
+}
 
 .host {
   width: 1200px;
@@ -96,159 +115,195 @@ footer {
   line-height: 50px;
   text-align: center;
   border-top: 1px solid #ccc;
-  font-size: 12px; }
-  .host a {
-    font-size: 12px; }
+  font-size: 12px;
+}
+.host a {
+  font-size: 12px;
+}
 
 .console-title {
   height: 40px;
   line-height: 40px;
   border-bottom: 1px solid #ccc;
-  margin-bottom: 10px; }
-  .console-title span {
-    font-size: 20px; }
-  .console-title a {
-    color: #00aaff; }
+  margin-bottom: 10px;
+}
+.console-title span {
+  font-size: 20px;
+}
+.console-title a {
+  color: #00aaff;
+}
 
 .console-line-1 {
   line-height: 24px;
   height: 24px;
-  display: block; }
+  display: block;
+}
 
 .console-line-2 {
   line-height: 32px;
   height: 32px;
-  display: block; }
+  display: block;
+}
 
 .console-line-3 {
   line-height: 40px;
   height: 40px;
-  display: block; }
+  display: block;
+}
 
 .console-form-title {
   line-height: 40px;
   height: 40px;
   display: block;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+}
 
 .console-line-3 {
   line-height: 60px;
   height: 60px;
-  display: block; }
+  display: block;
+}
 
 .console-color {
-  color: #00aaff; }
+  color: #00aaff;
+}
 
 .console-icon {
   float: left;
   width: 20%;
   height: 100px;
   margin: 20px 0;
-  text-align: center; }
-  .console-icon a {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    text-align: center;
-    vertical-align: middle; }
+  text-align: center;
+}
+.console-icon a {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
 
 .console-message {
-  color: #ccc; }
+  color: #ccc;
+}
 
 a {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .console-child-title {
   width: 100%;
   height: 40px;
   line-height: 26px;
   border-bottom: 1px solid #ccc;
-  margin-bottom: 15px; }
-  .console-child-title span {
-    float: left;
-    height: 40px;
-    font-size: 16px;
-    padding: 0 10px;
-    box-sizing: border-box;
-    margin-left: 10px;
-    border-bottom: 3px solid #ccc; }
+  margin-bottom: 15px;
+}
+.console-child-title span {
+  float: left;
+  height: 40px;
+  font-size: 16px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  border-bottom: 3px solid #ccc;
+}
 
 .upload-head {
   width: 100px;
   height: 100px;
-  position: relative; }
-  .upload-head input[type=file] {
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    z-index: 100;
-    cursor: pointer;
-    opacity: 0; }
-  .upload-head img {
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    z-index: 99; }
+  position: relative;
+}
+.upload-head input[type=file] {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 100;
+  cursor: pointer;
+  opacity: 0;
+}
+.upload-head img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 99;
+}
 
 .console-info-one {
   width: 50%;
   float: left;
-  line-height: 34px; }
-  .console-info-one span:nth-of-type(1) {
-    width: 20%;
-    text-align: right; }
+  line-height: 34px;
+}
+.console-info-one span:nth-of-type(1) {
+  width: 20%;
+  text-align: right;
+}
 
 .console-info-one:nth-of-type(2n) {
-  padding-right: 10px; }
+  padding-right: 10px;
+}
 
 .console-info-one:nth-of-type(2n-1) {
-  padding-left: 10px; }
+  padding-left: 10px;
+}
 
 .console-wx {
   width: 30%;
-  float: left; }
-  .console-wx img {
-    width: 100%;
-    height: 100%; }
+  float: left;
+}
+.console-wx img {
+  width: 100%;
+  height: 100%;
+}
 
 .console-contact {
   float: left;
-  margin-top: 10px; }
-  .console-contact p {
-    margin-bottom: 0;
-    line-height: 30px;
-    overflow: hidden; }
-    .console-contact p span {
-      float: left; }
-    .console-contact p span:nth-of-type(1) {
-      width: 60px;
-      text-align: right; }
+  margin-top: 10px;
+}
+.console-contact p {
+  margin-bottom: 0;
+  line-height: 30px;
+  overflow: hidden;
+}
+.console-contact p span {
+  float: left;
+}
+.console-contact p span:nth-of-type(1) {
+  width: 60px;
+  text-align: right;
+}
 
 .console-download {
-  height: 50px; }
-  .console-download input {
-    width: 40%;
-    margin-right: 9%;
-    margin-top: 20px; }
+  height: 50px;
+}
+.console-download input {
+  width: 40%;
+  margin-right: 9%;
+  margin-top: 20px;
+}
 
 .console-enter {
-  margin-top: 40px; }
+  margin-top: 40px;
+}
 
 .console-news-title {
-  margin-top: 30px; }
+  margin-top: 30px;
+}
 
 .console-news-content p {
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+}
 .console-news-content span:nth-of-type(2) {
-  color: #ccc; }
+  color: #ccc;
+}
 
 .content {
   position: absolute;
@@ -256,19 +311,22 @@ a {
   top: 50px;
   bottom: 0px;
   background: #eee;
-  z-index: 100; }
-  .content li h5 {
-    overflow: hidden;
-    color: #fff;
-    padding: 0 10px;
-    height: 40px;
-    line-height: 40px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: block;
-    background: #42485B; }
-  .content li h5:hover {
-    background: #00aaff; }
+  z-index: 100;
+}
+.content li h5 {
+  overflow: hidden;
+  color: #fff;
+  padding: 0 10px;
+  height: 40px;
+  line-height: 40px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  background: #42485B;
+}
+.content li h5:hover {
+  background: #00aaff;
+}
 
 .content-left-nav {
   float: left;
@@ -279,20 +337,25 @@ a {
   bottom: 0px;
   background-color: #333744;
   z-index: 102;
-  overflow-x: hidden; }
-  .content-left-nav dl {
-    background: #333744; }
-    .content-left-nav dl dd {
-      height: 40px;
-      line-height: 40px; }
-      .content-left-nav dl dd a {
-        padding-left: 20px;
-        color: #ccc;
-        width: 100%;
-        height: 100%;
-        display: block; }
-    .content-left-nav dl dd:hover {
-      background: #4A5064; }
+  overflow-x: hidden;
+}
+.content-left-nav dl {
+  background: #333744;
+}
+.content-left-nav dl dd {
+  height: 40px;
+  line-height: 40px;
+}
+.content-left-nav dl dd a {
+  padding-left: 20px;
+  color: #ccc;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.content-left-nav dl dd:hover {
+  background: #4A5064;
+}
 
 .content-right-inner {
   width: auto;
@@ -304,6 +367,7 @@ a {
   padding: 16px;
   overflow-x: hidden;
   overflow-y: auto;
-  background: #FFF; }
+  background: #FFF;
+}
 
 /*# sourceMappingURL=index.css.map */

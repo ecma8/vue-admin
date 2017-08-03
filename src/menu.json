@@ -25,6 +25,19 @@
                             "name": "学生管理"
                         }
                     ]
+                },
+                {
+                    "title": "云盘",
+                    "list": [
+                        {
+                            "router": "teacher",
+                            "name": "文档管理"
+                        },
+                        {
+                            "router": "student",
+                            "name": "视频管理"
+                        }
+                    ]
                 }
             ]
         },
