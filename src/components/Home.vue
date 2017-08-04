@@ -1,7 +1,7 @@
 <template>
 	<div id="warp">
-		<public-nav v-on:child-say="parentFind"></public-nav>
-		<router-view :message='data'></router-view>
+		<public-nav></public-nav>
+		<router-view></router-view>
 	</div>
 </template>
 <script>
@@ -18,13 +18,7 @@ export default {
 		}
 	},
     methods:{
-        parentFind:function(data){
-			this.data=data;
-		}
-    },
-    mounted(){
-        this.parentFind();
-	}
+    }
 }
 </script>
 <style>

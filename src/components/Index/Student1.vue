@@ -54,11 +54,17 @@
             </tr>
             </tbody>
         </table>
+        <input type="button" @click="add" value="增加">
+        <input type="button" @click="del" value="增加">
+        <div>现在数字为 {{count}}</div>
         <page :pages=page.pages :curr=1 v-on:pageIndex="pageIndex"></page>
+        {{page.pages}}
+        {{$route.query.name }}
         <router-view></router-view>
     </div>
 </template>
 <script>
+    import {mapGetters,mapActions} from 'vuex';
     import Page from '../public/Page.vue'
     export default{
         data(){
@@ -91,7 +97,7 @@
                     pages:3
                 },
                 num:10,
-                data:this.$route.query.name,
+                data:'123',
 
             }
         },
@@ -100,18 +106,34 @@
                 console.log(to.query);
                 console.log(from.query);
             },
-            data(val){
-                console.log(val)
-            }
+        },
+        computed:{
+            ...mapGetters(['count']),
         },
         components:{
             page:Page
         },
         methods:{
+            ...mapActions(['add','del']),
+            delTeacher(index,id){
+                if(confirm('确定要删除么')){
+                    this.list.splice(index,1);
+                }
+            },
+            alterTeacher(name,password){
+                let alter=prompt('正在修改'+name+'的密码',password);
+                if(alter){
+                    if(/^\w{6,20}$/.test(alter)){
+                        alert('修改成功')
+                    }else{
+                        alert('修改失败')
+                    }
+                }
+            },
             pageIndex(data){
             },
             search(){
-                this.$router.push({ path:'/student',query: {name: this.data}});
+                this.$router.push({ path:'/student',query: {name: 'query', type: 'object'}});
 //                this.num+=10;
 //                this.page.pages=Math.floor(this.num/10)
             }

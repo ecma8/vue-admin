@@ -2,7 +2,7 @@
 	<div class="nav">
 		<ul>
 			<li v-for='(item,index) in menuList'>
-				<a href="javascript:;" v-on:click='MenuShow({id:index,name:item.routerName})'>{{item.name}}</a>
+				<router-link :to="{name:item.routerName}">{{item.name}}</router-link>
 			</li>
 		</ul>
 	</div>
@@ -16,16 +16,16 @@
 				data:''
             }
         },
-        methods:{
-			MenuShow:function(data){
-				this.$emit('child-say',data.id);
-    			this.$router.push({ name: data.name })
-			}
-        },
-		watch:{
-            '$route': 'MenuShow'
-		},
-        mounted(){
-        }
+//        methods:{
+//			MenuShow:function(data){
+//				this.$emit('child-say',data.id);
+//    			this.$router.push({ name: data.name })
+//			}
+//        },
+//		watch:{
+//            '$route': 'MenuShow'
+//		},
+//        mounted(){
+//        }
     }
 </script>
