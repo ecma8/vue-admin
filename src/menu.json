@@ -30,11 +30,11 @@
                     "title": "云盘",
                     "list": [
                         {
-                            "router": "teacher",
+                            "router": "document",
                             "name": "文档管理"
                         },
                         {
-                            "router": "student",
+                            "router": "video",
                             "name": "视频管理"
                         }
                     ]

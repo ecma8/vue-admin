@@ -18,6 +18,8 @@ import TeacherAdd from './components/Index/TeacherAdd.vue';
 import StudentEdit from './components/Index/StudentEdit.vue';
 import StudentAdd from './components/Index/StudentAdd.vue';
 import Console from './components/Index/Console.vue';
+import Document from './components/Index/Document.vue';
+import Video from './components/Index/Video.vue';
 
 import One from './components/Cloud/One.vue';
 import More from './components/Cloud/More.vue';
@@ -69,7 +71,18 @@ const routes=[
                         path: 'student/add',
                         name:'studentAdd',
                         component: StudentAdd,
-                    }
+                    },
+                    {
+                        path: 'document',
+                        name:'document',
+                        component: Document,
+                    },
+                    {
+                        path: 'video',
+                        name:'video',
+                        component: Video,
+                    },
+
                 ]
             },
             {

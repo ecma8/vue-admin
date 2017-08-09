@@ -13,7 +13,7 @@ export default {
       'public-nav': Nav
     },
 	data(){
-        return {
+            return {
             data:''
 		}
 	},
@@ -22,5 +22,6 @@ export default {
 }
 </script>
 <style>
-	@import '../assets/css/index.css';
+	@import '../assets/css/bootstrap.css';
+	@import '../assets/css/public.css';
 </style>

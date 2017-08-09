@@ -99,17 +99,20 @@
 <style scoped>
     .pager {
         text-align: center;
+        float: right;
+        padding: 5px 10px;
     }
     .btn-pager {
         margin-left: 10px;
         padding: 0px;
         width: 60px;
-        height: 30px;
+        height: 28px;
         text-align: center;
         background-color: #ffffff;
-        color: #000000;
+        color: #666;
         border: 1px solid #e3e3e3;
         border-radius: 0px;
+        float: left;
     }
     .btn-pager:hover {
         background-color: #f2f2f2;
@@ -118,11 +121,12 @@
         display: inline-block;
         margin-left: 10px;
         width: 35px;
-        height: 30px;
-        line-height: 30px;
+        height: 28px;
+        line-height: 28px;
         background-color: #ffffff;
         cursor: pointer;
-        color: #000000;
+        color: #666;
+        float: left;
     }
     .active {
         color: #ffffff;

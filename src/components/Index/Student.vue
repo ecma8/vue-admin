@@ -1,60 +1,94 @@
 <template>
-    <div class="row">
+    <div class="content-right">
         <div class="console-child-title">
-            <span>学生管理</span>
+            <span>教师管理</span>
         </div>
-        <div class="form-inline console-form-title">
-            <div class="form-group pull-left">
-                <select name="" id="" class="form-control">
-                    <option value="">姓名</option>
-                    <option value="">类型</option>
-                    <option value="">昵称</option>
-                    <option value="">帐号</option>
-                    <option value="">创建日期</option>
-                </select>
+        <div class="content-right-inner">
+                <div class="form-inline console-form-title">
+                    <div class="form-group pull-left col-lg-1">
+                        <select id="" class="form-control">
+                            <option value="1">姓名</option>
+                            <option value="2">类型</option>
+                            <option value="3">昵称</option>
+                            <option value="4">帐号</option>
+                            <option value="5">创建日期</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-lg-2">
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group col-lg-1">
+                        <input type="button" value="查询" class="btn btn-default" id="123">
+                    </div>
+                    <div class="form-group pull-right col-lg-1">
+                        <router-link :to="{name:'studentAdd'}" class="btn btn-info">添加学生</router-link>
+                    </div>
+                    <a href="" class="pull-right col-lg-1 console-color">批量导入</a>
+                    <a href="" class="pull-right col-lg-1 console-color">批量导出</a>
+                </div>
+                <table class="console-table">
+                    <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>昵称</th>
+                        <th>性别</th>
+                        <th>授课</th>
+                        <th>帐号</th>
+                        <th>注册/创建日期</th>
+                        <th class="col-lg-2">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>
+                            <a href="" class="console-color-1">编辑</a>
+                            <a href="" class="console-color-1">修改密码</a>
+                            <a href="" class="console-color-2">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="" class="console-color-1">编辑</a>
+                            <a href="" class="console-color-1">修改密码</a>
+                            <a href="" class="console-color-2">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a href="" class="console-color-1">编辑</a>
+                            <a href="" class="console-color-1">修改密码</a>
+                            <a href="" class="console-color-2">删除</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="8">
+                            <page :pages=10 :curr=1 v-on:pageIndex="pageIndex"></page>
+                            <span>共6页 每页显示五条</span>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
             </div>
-            <div class="form-group col-lg-2">
-                <input type="text" class="form-control" v-model="data">
-            </div>
-            <div class="form-group  col-lg-1">
-                <input type="button" value="查询" class="btn btn-info" @click='search'>
-            </div>
-            <div class="form-group pull-right col-lg-1">
-                <router-link :to="{ name:'studentAdd'}" class="btn btn-info">添加老师</router-link>
-            </div>
-            <a href="" class="pull-right col-lg-1 console-color">批量导入</a>
-            <a href="" class="pull-right col-lg-1 console-color">批量导出</a>
-        </div>
-        <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th class="col-lg-2">姓名</th>
-                <th class="col-lg-2">昵称</th>
-                <th class="col-lg-1">性别</th>
-                <th class="col-lg-1">正式学员</th>
-                <th class="col-lg-2">帐号</th>
-                <th class="col-lg-2">注册/创建日期</th>
-                <th class="col-lg-2">操作</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr v-for="(item,index) in list">
-                <td v-text="item.name"></td>
-                <td v-text="item.nickName"></td>
-                <td v-text="item.sex"></td>
-                <td v-text="item.status"></td>
-                <td v-text="item.accounts"></td>
-                <td v-text="item.create_time"></td>
-                <td>
-                    <router-link :to="{ name: 'studentEdit', params: { id: item.id }}" class="console-color">编辑</router-link>
-                    <a @click="alterTeacher(item.name,item.password)" class="console-color">修改密码</a>
-                    <a @click="delTeacher(index,item.id)" class="console-color">删除</a>
-                    <router-view></router-view>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <page :pages=page.pages :curr=1 v-on:pageIndex="pageIndex"></page>
         <router-view></router-view>
     </div>
 </template>
@@ -92,6 +126,7 @@
                 },
                 num:10,
                 data:this.$route.query.name,
+                select:''
 
             }
         },
@@ -111,9 +146,13 @@
             pageIndex(data){
             },
             search(){
-                this.$router.push({ path:'/student',query: {name: this.data}});
+                this.$router.push({ path:'/student',query: {type:this.select,name: this.data}});
 //                this.num+=10;
 //                this.page.pages=Math.floor(this.num/10)
+            },
+            change(){
+
+                this.$router.push({ path:'/student',query: {type:this.select,name: this.data}});
             }
         }
     }

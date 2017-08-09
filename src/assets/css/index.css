@@ -1,373 +1,89 @@
-@import url(bootstrap.css);
-body, html, input, p, img, tr, td, ul, li, dl, dd, dt, h1, h2, h3, h4, h5, h6, div {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  box-sizing: border-box;
-}
-
-body {
-  background: #f5f5f5;
-}
-
-* {
-  font-family: "Microsoft YaHei" !important;
-}
-
-a {
-  list-style: none;
-  text-decoration: none;
-  color: #666;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-.logo {
-  width: 1200px;
-  height: 100px;
-  margin: 0 auto;
-  line-height: 100px;
-}
-.logo .left {
-  width: 50%;
-  height: 100px;
-  text-align: left;
-  float: left;
-  font-size: 36px;
-}
-.logo .left img {
-  height: 60%;
-  float: left;
-  margin-top: 20px;
-}
-.logo .right {
-  width: 50%;
-  height: 100px;
-  text-align: right;
-  float: left;
-}
-
-.nav {
-  width: 100%;
-  height: 50px;
-  line-height: 50px;
-  background: #eee;
-}
-.nav ul {
-  margin: 0 auto;
-  height: 100%;
-  background: #e3e3e3;
-}
-.nav ul a {
-  width: auto;
-  height: 100%;
-  float: left;
-  transition: all 0.3s ease;
-  padding: 0 30px;
-}
-.nav ul li {
-  width: auto;
-  height: 50px;
-  line-height: 50px;
-  float: left;
-  font-size: 16px;
-  transition: all 0.3s ease;
-}
-.nav ul li .nav-a {
-  background: #00aaff;
-  color: #fff;
-}
-.nav ul a:hover {
-  background: #00aaff;
-  color: #fff;
-}
-
-footer {
-  width: 100%;
-  background: #fff;
-  margin: 0 auto;
-}
-
-.content-us {
-  width: 1200px;
-  padding: 10px 0 30px;
-  line-height: 14px;
-  margin: 0 auto;
-  text-align: center;
-}
-.content-us ul li {
-  width: 100px;
-  padding: 0px;
-  text-align: center;
-  display: inline-block;
-  transition: all 1s ease;
-}
-.content-us ul a:hover li {
-  color: #00aaff;
-}
-
-.host {
-  width: 1200px;
-  margin: 0 auto;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  border-top: 1px solid #ccc;
-  font-size: 12px;
-}
-.host a {
-  font-size: 12px;
-}
-
-.console-title {
-  height: 40px;
-  line-height: 40px;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 10px;
-}
-.console-title span {
-  font-size: 20px;
-}
-.console-title a {
-  color: #00aaff;
-}
-
-.console-line-1 {
-  line-height: 24px;
-  height: 24px;
-  display: block;
-}
-
-.console-line-2 {
-  line-height: 32px;
-  height: 32px;
-  display: block;
-}
-
-.console-line-3 {
-  line-height: 40px;
-  height: 40px;
-  display: block;
-}
-
-.console-form-title {
-  line-height: 40px;
-  height: 40px;
-  display: block;
-  margin-bottom: 15px;
-}
-
-.console-line-3 {
-  line-height: 60px;
-  height: 60px;
-  display: block;
-}
-
 .console-color {
-  color: #00aaff;
+  color: #4f9dff !important;
 }
 
-.console-icon {
-  float: left;
-  width: 20%;
-  height: 100px;
-  margin: 20px 0;
-  text-align: center;
+.console-color-1 {
+  color: #5D8CC7;
 }
-.console-icon a {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  text-align: center;
-  vertical-align: middle;
+
+.console-color-2 {
+  color: #EE7A72;
+}
+
+.console-color-3 {
+  color: #F2766B;
+}
+
+.console-color-4 {
+  color: #6c778f;
+}
+
+.bg-white {
+  background: #fff;
 }
 
 .console-message {
-  color: #ccc;
+  line-height: 34px;
+  color: #abb5ca;
 }
 
-a {
-  cursor: pointer;
+nav {
+  background-image: linear-gradient(134deg, #4f9dff 0%, #30e6fe 100%);
+  height: 80px;
 }
 
-.console-child-title {
-  width: 100%;
-  height: 40px;
-  line-height: 26px;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 15px;
-}
-.console-child-title span {
+.console-logo {
+  width: 180px;
   float: left;
-  height: 40px;
+  line-height: 80px;
+}
+.console-logo img {
+  width: 88px;
+  height: 36px;
+  float: left;
+  vertical-align: middle;
+}
+.console-logo span {
+  float: left;
+  color: #ffffff;
   font-size: 16px;
   padding: 0 10px;
-  box-sizing: border-box;
-  margin-left: 10px;
-  border-bottom: 3px solid #ccc;
 }
 
-.upload-head {
-  width: 100px;
-  height: 100px;
-  position: relative;
-}
-.upload-head input[type=file] {
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100px;
-  height: 100px;
-  z-index: 100;
-  cursor: pointer;
-  opacity: 0;
-}
-.upload-head img {
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100px;
-  height: 100px;
-  z-index: 99;
-}
-
-.console-info-one {
-  width: 50%;
-  float: left;
-  line-height: 34px;
-}
-.console-info-one span:nth-of-type(1) {
-  width: 20%;
-  text-align: right;
-}
-
-.console-info-one:nth-of-type(2n) {
-  padding-right: 10px;
-}
-
-.console-info-one:nth-of-type(2n-1) {
-  padding-left: 10px;
-}
-
-.console-wx {
-  width: 30%;
-  float: left;
-}
-.console-wx img {
-  width: 100%;
-  height: 100%;
-}
-
-.console-contact {
-  float: left;
-  margin-top: 10px;
-}
-.console-contact p {
-  margin-bottom: 0;
-  line-height: 30px;
+.console-nav {
   overflow: hidden;
-}
-.console-contact p span {
   float: left;
+  height: 80px;
 }
-.console-contact p span:nth-of-type(1) {
-  width: 60px;
-  text-align: right;
+.console-nav li {
+  float: left;
+  height: 80px;
+  text-align: center;
 }
-
-.console-download {
-  height: 50px;
+.console-nav a {
+  display: inline-block;
+  height: 80px;
+  padding: 10px 30px;
 }
-.console-download input {
-  width: 40%;
-  margin-right: 9%;
-  margin-top: 20px;
+.console-nav img {
+  height: 30px;
 }
-
-.console-enter {
-  margin-top: 40px;
-}
-
-.console-news-title {
-  margin-top: 30px;
-}
-
-.console-news-content p {
-  width: 100%;
-  overflow: hidden;
-}
-.console-news-content span:nth-of-type(2) {
-  color: #ccc;
-}
-
-.content {
-  position: absolute;
-  width: 100%;
-  top: 50px;
-  bottom: 0px;
-  background: #eee;
-  z-index: 100;
-}
-.content li h5 {
-  overflow: hidden;
+.console-nav p {
   color: #fff;
-  padding: 0 10px;
-  height: 40px;
-  line-height: 40px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  display: block;
-  background: #42485B;
-}
-.content li h5:hover {
-  background: #00aaff;
+  margin-top: 4px;
 }
 
-.content-left-nav {
-  float: left;
-  width: 180px;
-  display: block;
-  position: fixed;
-  top: 50px;
-  bottom: 0px;
-  background-color: #333744;
-  z-index: 102;
-  overflow-x: hidden;
+.console-person {
+  overflow: hidden;
+  float: right;
+  height: 80px;
+  width: 300px;
 }
-.content-left-nav dl {
-  background: #333744;
-}
-.content-left-nav dl dd {
-  height: 40px;
-  line-height: 40px;
-}
-.content-left-nav dl dd a {
-  padding-left: 20px;
-  color: #ccc;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.content-left-nav dl dd:hover {
-  background: #4A5064;
-}
-
-.content-right-inner {
-  width: auto;
-  position: absolute;
-  top: 0;
-  left: 180px;
-  bottom: 0;
-  right: 0;
-  padding: 16px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background: #FFF;
+.console-person li {
+  height: 80px;
+  line-height: 80px;
+  float: right;
+  padding: 0 20px;
 }
 
 /*# sourceMappingURL=index.css.map */

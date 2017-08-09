@@ -2,7 +2,9 @@
     <div class='content'>
         <ul class='content-left-nav'>
             <li v-for='item in json'>
-                <h5>{{item.title}}</h5>
+                <h5>
+                    <span>{{item.title}}</span>
+                </h5>
                 <dl>
                     <dd v-for='items in item.list'>
                         <router-link :to="{name:items.router}">{{items.name}}</router-link>
@@ -10,9 +12,7 @@
                 </dl>
             </li>
         </ul>
-        <div class='content-right-inner'>
-            <router-view></router-view>
-        </div>
+        <router-view></router-view>
     </div>
 </template>
 <script>
@@ -37,3 +37,9 @@
         props:['message']
     }
 </script>
+<style scoped="scoped">
+    .router-link-active{
+        background: #fff;
+        color: #4C99FF;
+    }
+</style>

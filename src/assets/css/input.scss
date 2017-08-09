@@ -1,0 +1,23 @@
+@import "base.scss";
+@import "upload.scss";
+.console-head-img{
+  width: 100px;
+  height: 100px;
+  background: #ccc;
+  border:none;
+  display: block;
+  border-radius: 100px;
+}
+.console-upload{
+  width: 100px;
+  height: 100px;
+}
+.upload-mask{
+  @include mask(rgba(0,0,0,0.6),1001)
+}
+.upload-inner{
+  @include mask(#fff,1002);
+  width: 660px;
+  height: 500px;
+  padding: 20px;
+}

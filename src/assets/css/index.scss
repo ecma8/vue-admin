@@ -1,7 +1,60 @@
-@import 'base.scss';
-@import 'bootstrap.css';
-@import "public.scss";
-@import 'header.scss';
-@import 'public_class.scss';
-@import 'content.scss';
+@import "base.scss";
+nav{
+  @include linear();
+  height:80px;
+}
+.console-logo{
+  width: 180px;
+  float: left;
+  line-height: 80px;
+  img{
+    width: 88px;
+    height: 36px;
+    float: left;
+    vertical-align: middle;
+  }
+  span{
+    float: left;
+    color: $font-color-white;
+    font-size:$font-size-16;
+    padding: 0 10px;
+  }
+}
+.console-nav{
+  overflow: hidden;
+  float: left;
+  height: 80px;
+  li{
+    float: left;
+    height: 80px;
+    text-align: center;
+  }
+  a{
+    display: inline-block;
+    height: 80px;
+    padding: 10px 30px;
+  }
+  img{
+    height: 30px;
 
+  }
+  p{
+    color: #fff;
+    margin-top: 4px;
+  }
+}
+.console-person{
+  overflow: hidden;
+  float: right;
+  height: 80px;
+  width: 300px;
+  li{
+    height: 80px;
+    line-height: 80px;
+    float: right;
+    padding:0 20px;
+  }
+  img{
+
+  }
+}
