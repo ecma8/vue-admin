@@ -1,6 +1,6 @@
-var path = require('path')
-var webpack = require('webpack')
-var proxy = require('http-proxy-middleware');
+const path = require('path')
+const webpack = require('webpack')
+const proxy = require('http-proxy-middleware');
 module.exports = {
   entry: './src/main.js',
 
@@ -20,7 +20,7 @@ module.exports = {
             // the "scss" and "sass" values for the lang attribute to the right configs here.
             // other preprocessors should work out of the box, no loader config like this necessary.
             'scss': 'vue-style-loader!css-loader!sass-loader',
-            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
           }
           // other vue-loader options go here
         }
@@ -42,13 +42,13 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/
       },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]?[hash]'
+        {
+            test: /\.(png|jpg|gif)$/,
+            loader: 'file-loader',
+            options: {
+                name: '[name].[ext]?[hash]'
+            }
         }
-      }
     ]
   },
   resolve: {
