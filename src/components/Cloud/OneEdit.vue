@@ -1,5 +1,13 @@
 <template>
-    <router-view></router-view>
+    <div class="content-right">
+        <div class="console-child-title">
+            <span>教师管理</span>
+        </div>
+        <div class="content-right-inner">
+
+        </div>
+        <router-view></router-view>
+    </div>
 </template>
 <script>
     import Page from '../public/Page.vue'
@@ -27,30 +35,41 @@
                         password:'456',
                         create_time:'2017.06.05 19:23'
                     }
-                ]
+                ],
+                page:{
+                    all:111,
+                    curr:10,
+                    pages:3
+                },
+                num:10,
+                data:this.$route.query.name,
+                select:''
+
+            }
+        },
+        watch: {
+            '$route' (to, from) {
+                console.log(to.query);
+                console.log(from.query);
+            },
+            data(val){
+                console.log(val)
             }
         },
         components:{
             page:Page
         },
         methods:{
-            delTeacher(index,id){
-                if(confirm('确定要删除么')){
-                    this.list.splice(index,1);
-                }
-            },
-            alterTeacher(name,password){
-                let alter=prompt('正在修改'+name+'的密码',password);
-                if(alter){
-                    if(/^\w{6,20}$/.test(alter)){
-                        alert('修改成功')
-                    }else{
-                        alert('修改失败')
-                    }
-                }
-            },
             pageIndex(data){
-                console.log(data)
+            },
+            search(){
+                this.$router.push({ path:'/student',query: {type:this.select,name: this.data}});
+//                this.num+=10;
+//                this.page.pages=Math.floor(this.num/10)
+            },
+            change(){
+
+                this.$router.push({ path:'/student',query: {type:this.select,name: this.data}});
             }
         }
     }

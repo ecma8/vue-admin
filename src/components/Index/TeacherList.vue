@@ -21,7 +21,7 @@
                     <input type="button" value="查询" class="btn btn-default" id="123">
                 </div>
                 <div class="form-group pull-right col-lg-1">
-                    <router-link :to="{name:'studentAdd'}" class="btn btn-info">添加学生</router-link>
+                    <router-link :to="{name:'teacherAdd'}" class="btn btn-info">添加老师</router-link>
                 </div>
                 <a href="" class="pull-right col-lg-1 console-color">批量导入</a>
                 <a href="" class="pull-right col-lg-1 console-color">批量导出</a>
@@ -40,6 +40,19 @@
                 </thead>
                 <tbody>
                 <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>
+                        <a href="" class="console-color-1">编辑</a>
+                        <a href="" class="console-color-1">修改密码</a>
+                        <a href="" class="console-color-2">删除</a>
+                    </td>
+                </tr>
+                <tr>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -47,7 +60,20 @@
                     <td></td>
                     <td></td>
                     <td>
-                        <router-link :to="{name:'oneEdit',params: { id: 123 }}">编辑</router-link>
+                        <a href="" class="console-color-1">编辑</a>
+                        <a href="" class="console-color-1">修改密码</a>
+                        <a href="" class="console-color-2">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <a href="" class="console-color-1">编辑</a>
                         <a href="" class="console-color-1">修改密码</a>
                         <a href="" class="console-color-2">删除</a>
                     </td>
@@ -63,6 +89,7 @@
                 </tfoot>
             </table>
         </div>
+
         <router-view></router-view>
     </div>
 </template>
@@ -92,41 +119,30 @@
                         password:'456',
                         create_time:'2017.06.05 19:23'
                     }
-                ],
-                page:{
-                    all:111,
-                    curr:10,
-                    pages:3
-                },
-                num:10,
-                data:this.$route.query.name,
-                select:''
-
-            }
-        },
-        watch: {
-            '$route' (to, from) {
-                console.log(to.query);
-                console.log(from.query);
-            },
-            data(val){
-                console.log(val)
+                ]
             }
         },
         components:{
             page:Page
         },
         methods:{
+            delTeacher(index,id){
+                if(confirm('确定要删除么')){
+                    this.list.splice(index,1);
+                }
+            },
+            alterTeacher(name,password){
+                let alter=prompt('正在修改'+name+'的密码',password);
+                if(alter){
+                    if(/^\w{6,20}$/.test(alter)){
+                        alert('修改成功')
+                    }else{
+                        alert('修改失败')
+                    }
+                }
+            },
             pageIndex(data){
-            },
-            search(){
-                this.$router.push({ path:'/student',query: {type:this.select,name: this.data}});
-//                this.num+=10;
-//                this.page.pages=Math.floor(this.num/10)
-            },
-            change(){
-
-                this.$router.push({ path:'/student',query: {type:this.select,name: this.data}});
+                console.log(data)
             }
         }
     }

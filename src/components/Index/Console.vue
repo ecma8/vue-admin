@@ -195,12 +195,12 @@
                     </div>
                     <div class="console-download-btn">
                         <div class="console-download-one">
-                            <iframe src="/src/assets/img/client.svg" frameborder="0" width="45px" height="31px"></iframe>
+                            <img src="../../assets/img/client.svg" width="45px" height="31px">
                             <h5>云教室</h5>
                             <p>v2.0.1.1 beta</p>
                         </div>
                         <div class="console-download-one">
-                            <iframe src="/src/assets/img/live_help.svg" frameborder="0" width="33px" height="31px"></iframe>
+                            <img src="../../assets/img/live_help.svg" width="33px" height="31px">
                             <h5>云教室</h5>
                             <p>v2.0.1.1 beta</p>
                         </div>
@@ -212,27 +212,27 @@
                     </div>
                     <div class="row console-news-content">
                         <p>
-                            <img src="/src/assets/img/news_icon.png" alt="">
+                            <img src="../../assets/img/news_icon.png" alt="">
                             <span class="pull-left">标题</span>
                             <span class="pull-right">2017.06.10</span>
                         </p>
                         <p>
-                            <img src="/src/assets/img/news_icon.png" alt="">
+                            <img src="../../assets/img/news_icon.png" alt="">
                             <span class="pull-left">标题</span>
                             <span class="pull-right">2017.06.10</span>
                         </p>
                         <p>
-                            <img src="/src/assets/img/news_icon.png" alt="">
+                            <img src="../../assets/img/news_icon.png" alt="">
                             <span class="pull-left">标题</span>
                             <span class="pull-right">2017.06.10</span>
                         </p>
                         <p>
-                            <img src="/src/assets/img/news_icon.png" alt="">
+                            <img src="../../assets/img/news_icon.png" alt="">
                             <span class="pull-left">标题</span>
                             <span class="pull-right">2017.06.10</span>
                         </p>
                         <p>
-                            <img src="/src/assets/img/news_icon.png" alt="">
+                            <img src="../../assets/img/news_icon.png" alt="">
                             <span class="pull-left">标题</span>
                             <span class="pull-right">2017.06.10</span>
                         </p>

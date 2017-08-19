@@ -46,7 +46,7 @@
             "name":"云教室",            
             "list": [
                 {
-                    "title": "云教室",
+                    "title": "教室管理",
                     "list": [
                         {
                             "router": "one",
@@ -55,6 +55,27 @@
                         {
                             "router": "more",
                             "name": "一对多"
+                        },
+                        {
+                            "router": "managed",
+                            "name": "托管班"
+                        }
+                    ]
+                },
+                {
+                    "title": "授课统计",
+                    "list": [
+                        {
+                            "router": "teachingCount",
+                            "name": "教师授课统计"
+                        },
+                        {
+                            "router": "studyingCount",
+                            "name": "学生上课统计"
+                        },
+                        {
+                            "router": "courseCount",
+                            "name": "课程统计"
                         }
                     ]
                 }

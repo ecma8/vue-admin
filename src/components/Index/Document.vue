@@ -61,15 +61,25 @@
                 </tfoot>
             </table>
             <p class="console-message">
-
-
                 温馨提示：<br>
 
                 1、删除后教师和学生将无法查看和下载；
 
             </p>
         </div>
-
         <router-view></router-view>
     </div>
 </template>
+<script>
+    import Page from '../public/Page.vue'
+    export default {
+        methods:{
+            pageIndex(data){
+                console.log(data)
+            }
+        },
+        components:{
+            page:Page
+        }
+    }
+</script>

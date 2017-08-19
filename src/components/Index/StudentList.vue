@@ -47,7 +47,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                        <router-link :to="{name:'oneEdit',params: { id: 123 }}">编辑</router-link>
+                        <router-link :to="{name:'studentEdit',params: { id: 123 }}">编辑</router-link>
                         <a href="" class="console-color-1">修改密码</a>
                         <a href="" class="console-color-2">删除</a>
                     </td>

@@ -7,29 +7,28 @@
 		<div class="row">
 			<ul class="console-nav col-lg-7">
 				<li>
-					<a href="">
+					<router-link to="/">
 						<img src="../../assets/img/index.svg"  style="width: 34px;height: 31px;">
 						<p>首页</p>
-					</a>
+					</router-link>
 				</li>
 				<li>
-					<a href="">
+					<router-link to="/cloud">
 						<img src="../../assets/img/cloud.svg"  style="width: 45px;height: 31px;">
-
 						<p>云教室</p>
-					</a>
+					</router-link>
 				</li>
 				<li>
-					<a href="">
+					<router-link to="/live">
 						<img src="../../assets/img/live.svg"  style="width: 32px;height: 31px;">
 						<p>直播服务</p>
-					</a>
+					</router-link>
 				</li>
 				<li>
-					<a href="">
+					<router-link to="/onlineSchool">
 						<img src="../../assets/img/online.svg"  style="width: 34px;height: 31px;">
 						<p>网校平台</p>
-					</a>
+					</router-link>
 				</li>
 			</ul>
 			<ul class="console-person col-lg-4">

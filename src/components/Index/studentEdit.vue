@@ -1,96 +1,99 @@
 <template>
-    <div>
+    <div class="content-right">
         <div class="console-child-title">
             <span>学生管理</span>
         </div>
-        <div class="form-horizontal">
-            <div class="form-group">
-                <label class="col-lg-1 control-label">教师头像:</label>
-                <div class="col-lg-2">
-                    <div class="upload-head">
-                        <img :src="headImg" alt="" class="img-circle" style="width: 100px;height: 100px;background: #ccc">
-                        <input type="file" @change="upload">
+        <div class="content-right-inner">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="" class="col-lg-1 control-label console-color-4">学生头像:</label>
+                    <div class="col-lg-2">
+                        <div class="upload-head upload-file">
+                            <img :src="headImg" alt="" class="img-circle" style="width: 100px;height: 100px;background: #ccc">
+                            <input type="file" @change="upload">
+                        </div>
+                        <input type="hidden" v-model="form.head" >
                     </div>
-                    <input type="hidden" v-model="form.head" >
+                    <p class="col-lg-5 console-line-3">
+                        <!--这是错误信息-->
+                    </p>
                 </div>
-                <p class="col-lg-5 console-line-3">
-                    这是错误信息
-                </p>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-1 control-label">*学生姓名:</label>
-                <div class="col-lg-4" :class="{'has-error':!status.name}">
-                    <input type="text"  class="form-control" placeholder="" v-model="form.name" @input="check({name:'name',value:form.name, pattern:/^([\u4E00-\uFA29]|[\uE7C7-\uE7F3]|[a-zA-Z0-9_]){2,12}$/})" maxlength="12" minlength="2">
+                <div class="form-group">
+                    <label for="" class="col-lg-1 control-label console-color-4"><span class="console-color-3">* </span>学生姓名:</label>
+                    <div class="col-lg-4" :class="{'has-error':!status.name}">
+                        <input type="text"  class="form-control" placeholder="" v-model="form.name" @input="check({name:'name',value:form.name, pattern:/^([\u4E00-\uFA29]|[\uE7C7-\uE7F3]|[a-zA-Z0-9_]){2,12}$/})" maxlength="12" minlength="2">
+                    </div>
+                    <p class="col-lg-5 console-line-2">
+                        2-12位的汉字或英文
+                    </p>
                 </div>
-                <p class="col-lg-5 console-line-2">
-                    2-12位的汉字或英文
-                </p>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-1 control-label">学生昵称:</label>
-                <div class="col-lg-4" :class="{'has-error':!status.nickName}">
-                    <input type="text" class="form-control" placeholder="" v-model="form.nickName" @input="check({name:'nickName', value:form.nickName,pattern:/^([\u4E00-\uFA29]|[\uE7C7-\uE7F3]|[a-zA-Z0-9_]){2,12}$/})" maxlength="12" minlength="2">
+                <div class="form-group">
+                    <label for="" class="col-lg-1 control-label console-color-4">学生昵称:</label>
+                    <div class="col-lg-4" :class="{'has-error':!status.nickName}">
+                        <input type="text" class="form-control" placeholder="" v-model="form.nickName" @input="check({name:'nickName', value:form.nickName,pattern:/^([\u4E00-\uFA29]|[\uE7C7-\uE7F3]|[a-zA-Z0-9_]){2,12}$/})" maxlength="12" minlength="2">
+                    </div>
+                    <p class="col-lg-5 console-line-2">
+                        2-12位的汉字或英文，不填写默认为姓名
+                    </p>
                 </div>
-                <p class="col-lg-5 console-line-2">
-                    2-12位的汉字或英文，不填写默认为姓名
-                </p>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-1 control-label">*登录帐号:</label>
-                <div class="col-lg-4" :class="{'has-error':!status.accounts}">
-                    <input type="text" class="form-control" placeholder=""  v-model="form.accounts" @input="check({name:'accounts', value:form.accounts,pattern:/^\w{6,20}$/})" maxlength="20" minlength="6">
+                <div class="form-group">
+                    <label for="" class="col-lg-1 control-label console-color-4"><span class="console-color-3">* </span>登录帐号:</label>
+                    <div class="col-lg-4" :class="{'has-error':!status.accounts}">
+                        <input type="text" class="form-control" placeholder=""  v-model="form.accounts" @input="check({name:'accounts', value:form.accounts,pattern:/^\w{6,20}$/})" maxlength="20" minlength="6">
+                    </div>
+                    <p class="col-lg-5 console-line-2">
+                        6-20位的字母或数字的组合，推荐使用手机号或邮箱
+                    </p>
                 </div>
-                <p class="col-lg-5 console-line-2">
-                    6-20位的字母或数字的组合，推荐使用手机号或邮箱
-                </p>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-1 control-label">*登录密码:</label>
-                <div class="col-lg-4" :class="{'has-error':!status.password}">
-                    <input type="text" class="form-control" placeholder="" v-model="form.password" @input="check({name:'password', value:form.password,pattern:/^\w{6,20}$/})" maxlength="20" minlength="6">
+                <div class="form-group">
+                    <label for="" class="col-lg-1 control-label console-color-4"><span class="console-color-3">* </span>登录密码:</label>
+                    <div class="col-lg-4" :class="{'has-error':!status.password}">
+                        <input type="text" class="form-control" placeholder="" v-model="form.password" @input="check({name:'password', value:form.password,pattern:/^\w{6,20}$/})" maxlength="20" minlength="6">
+                    </div>
+                    <p class="col-lg-5 console-line-2">
+                        6-20位的字母或数字的组合，默认：123456
+                    </p>
                 </div>
-                <p class="col-lg-5 console-line-2">
-                    6-20位的字母或数字的组合，默认：123456
-                </p>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-1 control-label">*选择性别:</label>
-                <div class="col-lg-4">
-                    <label class="radio-inline">
-                        <input type="radio" name="sex" v-model="form.sex" value="0"> 男
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="sex" v-model="form.sex" value="1"> 女
-                    </label>
+                <div class="form-group">
+                    <label for="" class="col-lg-1 control-label console-color-4"><span class="console-color-3">* </span>选择性别:</label>
+                    <div class="col-lg-4">
+                        <label class="radio-inline">
+                            <input type="radio" name="sex" v-model="form.sex" value="0"> 男
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="sex" v-model="form.sex" value="1"> 女
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-1 control-label">*学生类型:</label>
-                <div class="col-lg-4">
-                    <label class="radio-inline">
-                        <input type="radio" name="status" v-model="form.status" value="1"> 正式
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="status" v-model="form.status" value="0"> 非正式
-                    </label>
+                <div class="form-group">
+                    <label for="" class="col-lg-1 control-label console-color-4"><span class="console-color-3">* </span>学生类型:</label>
+                    <div class="col-lg-4">
+                        <label class="radio-inline">
+                            <input type="radio" name="status" v-model="form.status" value="1"> 正式
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="status" v-model="form.status" value="0"> 非正式
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-1 control-label">教师介绍:</label>
-                <div class="col-lg-4">
-                    <textarea name="" v-model="form.desc" class="form-control" cols="30" rows="10" maxlength="5000"></textarea>
+                <div class="form-group">
+                    <label for="" class="col-lg-1 control-label console-color-4">教师介绍:</label>
+                    <div class="col-lg-4">
+                        <textarea name="" v-model="form.desc" class="form-control" cols="30" rows="10" maxlength="5000"></textarea>
+                    </div>
+                    <p class="col-lg-5 console-line-2">
+                        {{form.desc.length}}/5000个字符
+                    </p>
                 </div>
-                <p class="col-lg-5 console-line-2">
-                    {{form.desc.length}}/5000个字符
-                </p>
-            </div>
-            <div class="form-group">
-                <label for="" class="col-lg-1 control-label"></label>
-                <div class="col-lg-4">
-                    <input type="submit" value="提交" class="btn btn-info" @click="submit()">
+                <div class="form-group">
+                    <label for="" class="col-lg-1 control-label console-color-4"></label>
+                    <div class="col-lg-4">
+                        <input type="submit" value="提交" class="btn btn-info" @click="submit()">
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 
 </template>
@@ -106,8 +109,9 @@
                     nickName:'',
                     sex:0,
                     status:1,
-                    password:'123456',
-                    desc:1
+                    desc:0,
+                    accounts:'',
+                    password:'123456'
                 },
                 submitStatus:false,
                 //状态记录
@@ -119,7 +123,6 @@
                 }
             }
         },
-
         methods:{
             check(data){
 

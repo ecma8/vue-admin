@@ -23,7 +23,7 @@
         data(){
             return {
                 id:0,
-                json:json.menuList[1].list
+                json:json.menuList[2].list
             }
         },
         methods:{
