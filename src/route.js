@@ -18,6 +18,7 @@ import TeacherAdd from './components/Index/TeacherAdd.vue';
 import TeacherList from './components/Index/TeacherList.vue';
 
 import Student from './components/Index/Student.vue';
+import Student1 from './components/Index/Student1.vue';
 import StudentEdit from './components/Index/StudentEdit.vue';
 import StudentAdd from './components/Index/StudentAdd.vue';
 import StudentList from './components/Index/StudentList.vue';
@@ -177,7 +178,7 @@ const routes=[
                 ]
             }
         ]
-    }
+    },
     // ,
     // {
     //     path: '/to',
@@ -196,11 +197,11 @@ const routes=[
     //         }
     //     ]
     // },
-    // {
-    //     path: '/from',
-    //     name:'form',
-    //     component: RouteFrom
-    // },
+    {
+        path: '/from',
+        name:'form',
+        component: Student1
+    }
 ];
 
 export default new VueRouter({
