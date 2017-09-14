@@ -2,11 +2,13 @@ const path = require('path')
 const webpack = require('webpack')
 const proxy = require('http-proxy-middleware');
 module.exports = {
-  entry: './src/main.js',
-
+  devtool: '#eval-source-map',
+  entry: {
+    app: ["babel-polyfill", "./src/main.js"]
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    publicPath: 'dist/',
     filename: 'build.js'
   },
   module: {
@@ -53,7 +55,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': '../',
     }
   },
   // devServer: {
@@ -72,8 +75,7 @@ module.exports = {
   // },
   performance: {
     hints: false
-  },
-  devtool: '#eval-source-map'
+  }
 };
 
 if (process.env.NODE_ENV === 'production') {
@@ -86,7 +88,7 @@ if (process.env.NODE_ENV === 'production') {
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
+      sourceMap: false,
       compress: {
         warnings: false
       }
