@@ -5,6 +5,7 @@ const Vuex = resolve => require(['./components/Vuex.vue'], resolve);
 const Home = resolve => require(['./components/Home.vue'], resolve);
 const Index = resolve => require(['./components/Index.vue'], resolve);
 const Cloud = resolve => require(['./components/Cloud.vue'], resolve);
+const Online = resolve => require(['./components/Online.vue'], resolve);
 
 const Teacher = resolve => require(['./components/Index/Teacher.vue'], resolve);
 const TeacherEdit = resolve => require(['./components/Index/TeacherEdit.vue'], resolve);
@@ -39,7 +40,7 @@ const TrusteeshipAdd = resolve => require(['./components/Cloud/TrusteeshipAdd.vu
 const TrusteeshipList = resolve => require(['./components/Cloud/TrusteeshipList.vue'], resolve);
 const StudyingCount = resolve => require(['./components/Cloud/StudyingCount.vue'], resolve);
 const TeachingCount = resolve => require(['./components/Cloud/TeachingCount.vue'], resolve);
-const CourseCount = resolve => require(['./components/Cloud/CourseCount.vue'], resolve);
+const CourseCountDetail = resolve => require(['./components/Cloud/CourseCount.vue'], resolve);
 
 const Live = resolve => require(['./components/Live.vue'], resolve);
 const LiveList = resolve => require(['./components/live/LiveList.vue'], resolve);
@@ -50,14 +51,20 @@ const LiveCount = resolve => require(['./components/live/LiveCount.vue'], resolv
 const LiveMobileCount = resolve => require(['./components/live/LiveMobileCount.vue'], resolve);
 const LivePromotion = resolve => require(['./components/live/LivePromotion.vue'], resolve);
 
+const LiveCourse = resolve => require(['./components/Online/LiveCourse.vue'], resolve);
+const ColumnCourse = resolve => require(['./components/Online/ColumnCourse.vue'], resolve);
+const OneCourse = resolve => require(['./components/Online/OneCourse.vue'], resolve);
+const MoreCourse = resolve => require(['./components/Online/MoreCourse.vue'], resolve);
+const Configure = resolve => require(['./components/Online/Configure.vue'], resolve);
+const StudentCount = resolve => require(['./components/Online/StudentCount.vue'], resolve);
+const CourseCount = resolve => require(['./components/Online/CourseCount.vue'], resolve);
+
 const LiveBasicSet = resolve => require(['./components/live/LiveSet/BasicSet.vue'], resolve);
 const LiveSet = resolve => require(['./components/live/liveSet/LiveSet.vue'], resolve);
 const LiveCustomMenu = resolve => require(['./components/live/LiveSet/CustomMenu.vue'], resolve);
 const LiveBootMap = resolve => require(['./components/live/LiveSet/LiveBootMap.vue'], resolve);
 const LiveViewingMode = resolve => require(['./components/live/LiveSet/ViewingMode.vue'], resolve);
 const LiveWeChatShare = resolve => require(['./components/live/LiveSet/WeChatShare.vue'], resolve);
-
-
 Vue.use(VueRouter);
 const routes=[
     {
@@ -222,8 +229,8 @@ const routes=[
                     },
                     {
                         path: 'courseCount',
-                        name:'courseCount',
-                        component: CourseCount,
+                        name:'courseCountDetail',
+                        component: CourseCountDetail,
                     }
                 ]
             },
@@ -304,6 +311,50 @@ const routes=[
                         name: 'livePromotion',
                         component:LivePromotion
                     }
+                ]
+            },
+            {
+                path: '/online',
+                name:'online',
+                redirect:'/online/liveCourse',
+                component: Online,
+                children:[
+                    {
+                        path: 'liveCourse',
+                        name: 'liveCourse',
+                        component:LiveCourse,
+                    },
+                    {
+                        path: 'columnCourse',
+                        name: 'columnCourse',
+                        component:ColumnCourse,
+
+                    },
+                    {
+                        path: 'oneCourse',
+                        name: 'oneCourse',
+                        component:OneCourse
+                    },
+                    {
+                        path: 'moreCourse',
+                        name: 'moreCourse',
+                        component:MoreCourse
+                    },
+                    {
+                        path: 'configure',
+                        name: 'configure',
+                        component:Configure
+                    },
+                    {
+                        path: 'studentCount',
+                        name: 'studentCount',
+                        component:StudentCount
+                    },
+                    {
+                        path: 'courseCount',
+                        name: 'courseCount',
+                        component:CourseCount
+                    },
                 ]
             }
         ]

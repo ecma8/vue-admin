@@ -25,7 +25,7 @@
 					</router-link>
 				</li>
 				<li>
-					<router-link to="/onlineSchool">
+					<router-link to="/online">
 						<img src="../../assets/img/online.svg"  style="width: 34px;height: 31px;">
 						<p>网校平台</p>
 					</router-link>
