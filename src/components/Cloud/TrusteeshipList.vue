@@ -1,5 +1,5 @@
 <template>
     <div>
-        这是一对一编辑页面
+        这是托管班列表页面
     </div>
 </template>

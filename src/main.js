@@ -6,10 +6,13 @@ import router from './route.js'
 import store from './vuex.js'
 import './filter.js'
 
-Vue.prototype.$http = axios;
+const instance = axios.create({
+    baseURL: 'http://open.ecma8.com'
+});
+Vue.prototype.$http = instance;
 
-global.API_ROOT='http://localhost:89';
-global.IMG_ROOT='http://127.0.0.1:8081/';
+// global.API_ROOT='http://localhost:89';
+// global.IMG_ROOT='http://127.0.0.1:8081/';
 
 const app = new Vue({
     store,

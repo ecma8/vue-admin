@@ -16,7 +16,7 @@
     </div>
 </template>
 <script>
-    import json from '../menu.json';
+    import json from '@/menu.json';
     export default {
         components: {
         },

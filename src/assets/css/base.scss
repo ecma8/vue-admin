@@ -1,5 +1,4 @@
 $index-color:#4f9dff;
-$w1:100%;
 
 
 $child-color-4279be:#4279be;
@@ -20,9 +19,9 @@ $border-color-dce1eb:#dce1eb;
 $border-color-c3cad9:#c3cad9;
 
 $font-color-dce1eb:#dce1eb;
-$font-color-6C788E:#6C788E;
+$font-color-6c788e:#6c788e;
 $font-color-4C99FF:#4C99FF;
-$font-color-F05B4E:#F05B4E;
+$font-color-f05b4e:#F05B4E;
 $font-color-4077C0:#4077C0;
 $font-color-white:#ffffff;
 $font-color-0a1633:#0a1633;
@@ -43,7 +42,7 @@ $font-size-18:18px;
   }
 }
 @mixin linear{
-  background-image:linear-gradient(134deg, #4f9dff 0%, #30e6fe 100%);
+  background-image:linear-gradient(134deg, $index-color 0%, #30e6fe 100%);
 }
 @mixin placeholder($color,$size:12px){
   ::-webkit-input-placeholder {
@@ -74,19 +73,19 @@ $font-size-18:18px;
   z-index: $index;
 }
 .console-color{
-  color: #4f9dff!important;
+  color: $index-color!important;
 }
 .console-color-1{
-  color: #5D8CC7;
+  color: $child-color-4279be!important;
 }
 .console-color-2{
-  color: #EE7A72;
+  color: $font-color-f05b4e!important;
 }
 .console-color-3{
-  color: #F2766B;
+  color: #F2766B!important;
 }
 .console-color-4{
-  color: #6c778f
+  color: #6c788e!important
 }
 .bg-white{
   background: #fff;
@@ -94,4 +93,103 @@ $font-size-18:18px;
 .console-message{
   line-height: 34px;
   color: #abb5ca;
+  text-align: left!important;
+}
+.conole-color-3
+.console-line-1{
+  line-height: 28px;
+}
+.console-line-2{
+  line-height: 34px;
+}
+.console-line-3{
+  line-height: 36px;
+}
+.console-line-4{
+  line-height: 40px;
+}
+.upload-file{
+  position: relative;
+  input[type=file]{
+    position: absolute;
+    left: 0;
+    top:0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+  a{
+    width: 100%;
+  }
+}
+@for $i from 1 through 12{
+  .margin-top-#{$i*10}{
+    margin-top: $i*10+px;
+  }
+}
+.margin-auto{
+  margin: 0 auto;
+}
+.upload-file-img{
+  float: left;
+  height: 100px;
+  overflow: hidden;
+  img{
+    width: 100%;
+  }
+}
+.upload-file-img-banner{
+  width: 198px;
+  height: 40px;
+  float: left;
+  margin-right: 30px;
+  img{
+    width: 198px;
+    height: 40px;
+  }
+}
+.upload-file-img-ico{
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+  img{
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+  }
+}
+.upload-file-img-guide{
+  width: 70px;
+  height: 128px;
+  margin-left: 15px;
+  margin-right: 15px;
+  img{
+    width: 70px;
+    height: 128px;
+  }
+}
+.upload-file-img-logo{
+  width: 120px;
+  height: 60px;
+  margin-right: 15px;
+  img{
+    width: 120px;
+    height: 60px;
+  }
+}
+.upload-file-img-goods{
+  width: 120px;
+  height: 80px;
+  img{
+    width: 120px;
+    height: 80px;
+  }
+}
+.control-label{
+  width: 120px!important;
+  font-weight: normal;
+}
+.console-message-1{
+  line-height: 24px;
 }

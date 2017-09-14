@@ -5,7 +5,7 @@
 			<span>控制台</span>
 		</div>
 		<div class="row">
-			<ul class="console-nav col-lg-7">
+			<ul class="console-nav col-lg-6">
 				<li>
 					<router-link to="/">
 						<img src="../../assets/img/index.svg"  style="width: 34px;height: 31px;">

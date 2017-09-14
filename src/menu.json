@@ -57,7 +57,7 @@
                             "name": "一对多"
                         },
                         {
-                            "router": "managed",
+                            "router": "trusteeship",
                             "name": "托管班"
                         }
                     ]
@@ -76,6 +76,46 @@
                         {
                             "router": "courseCount",
                             "name": "课程统计"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "routerName":"live",
+            "name":"直播服务",
+            "list": [
+                {
+                    "title": "直播管理",
+                    "list": [
+                        {
+                            "router": "liveManage",
+                            "name": "直播管理"
+                        },
+                        {
+                            "router": "liveExtend",
+                            "name": "直播推广"
+                        },
+                        {
+                            "router": "liveGoods",
+                            "name": "商品管理"
+                        }
+                    ]
+                },
+                {
+                    "title": "直播统计",
+                    "list": [
+                        {
+                            "router": "liveCount",
+                            "name": "直播数据统计"
+                        },
+                        {
+                            "router": "liveMobileCount",
+                            "name": "手机登记统计"
+                        },
+                        {
+                            "router": "livePromotion",
+                            "name": "直播收益统计"
                         }
                     ]
                 }

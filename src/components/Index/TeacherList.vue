@@ -119,11 +119,13 @@
                         password:'456',
                         create_time:'2017.06.05 19:23'
                     }
-                ]
+                ],
             }
         },
+        mounted(){
+        },
         components:{
-            page:Page
+            page:Page,
         },
         methods:{
             delTeacher(index,id){

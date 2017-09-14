@@ -1,0 +1,204 @@
+@import "base";
+.console-modal-mask{
+  @include mask(rgba(0,0,0,0.6),100000);
+}
+.console-modal-box{
+  @include mask(#fff,100000);
+  width: 400px;
+  height: 260px;
+}
+.console-modal-title{
+  height: 50px;
+  line-height: 50px;
+  background: #f2f3f5;
+  span:nth-of-type(1){
+    float: left;
+    padding-left: 20px;
+    color: #252F4A;
+    font-weight: bold;
+  }
+  span:nth-of-type(2){
+    float: right;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    transform: rotate(45deg);
+    line-height: 50px;
+    text-align: center;
+    color: #666;
+    cursor: pointer;
+  }
+}
+.console-modal-foot{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right:0;
+  height: 50px;
+  padding: 10px 20px;
+  border-top: 1px solid #f0f1f2;
+  text-align: right;
+  box-sizing: border-box;
+  input{
+    margin-left: 10px;
+    background:#ffffff;
+    border:1px solid #dbdcdf;
+    border-radius:3px;
+    width:68px;
+    height:28px;
+    font-size: 12px;
+    color: #666;
+  }
+  .console-modal-input-color{
+    background: #48adff!important;
+    border-color: #48adff!important;
+    color: #fff!important;
+  }
+}
+.console-modal-inner{
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:50px;
+  bottom: 50px;
+  overflow-y:auto;
+  p{
+    text-align: center;
+    //line-height: 100px;
+  }
+  input[type=button]{
+    background:#ffffff;
+    border:1px solid #dbdcdf;
+    border-radius:2px;
+    width:auto;
+    padding:0 10px;
+    height:28px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 12px;
+  }
+  .modal-inner-color{
+    background:#e4f0ff!important;
+    border:1px solid #48adff!important;
+    color: #48adff!important;
+  }
+}
+.console-modal-input-success[type=button],.console-modal-input-error[type=button]{
+  margin-left: 10px;
+  background:#ffffff;
+  border:1px solid #dbdcdf;
+  border-radius:3px;
+  width:68px;
+  height:28px;
+  font-size: 12px;
+  color: #666;
+}
+.modal-inner-color{
+  background:#e4f0ff;
+  border:1px solid #48adff;
+  color: #48adff;
+}
+.console-modal-ppt-inner{
+  padding:0 20px 20px 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:100px;
+  bottom: 50px;
+  overflow-y:auto;
+}
+.console-modal-count{
+  float: left;
+  color: #f00;
+  cursor: pointer;
+}
+.console-modal-table{
+  border-collapse: collapse;
+  width: 100%;
+  border:1px solid #ccc;
+  table-layout: fixed;
+  thead{
+    >tr{
+      >th{
+        text-align: left;
+        padding-left: 10px;
+        line-height: 30px;
+        border:1px solid #ccc;
+      }
+      >th:nth-of-type(1){
+        text-align: center;
+        padding-left: 0;
+        width: 50px;
+      }
+      >th:nth-of-type(2){
+        width: 200px;
+      }
+      >th:nth-of-type(3){
+        width: 87px;
+      }
+    }
+  }
+  tbody{
+    >tr{
+      border-bottom:1px solid #ccc;
+      >td{
+        text-align: left;
+        padding-left: 10px;
+        line-height: 30px;
+        border:1px solid #ccc;
+      }
+      >td:nth-of-type(1){
+        text-align: center;
+        padding-left: 0;
+      }
+    }
+  }
+  input{
+    margin: 0;
+    height: 28px;
+    vertical-align: middle;
+  }
+}
+.console-modal-form{
+  height: 40px;
+  padding: 0 20px;
+  input{
+    background: #fff;
+    border:1px solid #ccc;
+    vertical-align: middle;
+    height: 30px;
+    margin-top: 10px;
+    box-sizing: border-box;
+
+  }
+  input[type=text]{
+    float: left;
+    padding-left: 5px;
+    width: 280px;
+  }
+  input[type=button]
+  {
+    float: right;
+    padding: 0 20px;
+  }
+}
+.console-modal-download{
+  padding:30px 30px  40px 30px;
+  >img{
+    float: left;
+    width: 100px;
+    height: 100px;
+  }
+  >button{
+    width: 143px;
+    border:2px solid #333;
+    height: 40px;
+    border-radius: 50px;
+    color: #0a1534;
+    background: #fff;
+    margin-top: 28px;
+    float: right;
+  }
+}

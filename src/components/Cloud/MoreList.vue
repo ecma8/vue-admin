@@ -1,5 +1,5 @@
 <template>
     <div>
-        这是一对一编辑页面
+        这是一对多列表
     </div>
 </template>

@@ -1,16 +1,76 @@
-<style>
-    .demo-spin-icon-load{
-        animation: ani-demo-spin 1s linear infinite;
+<template>
+    <div class="loading">
+        <div class="loader-inner ball-scale-multiple">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</template>
+<style lang="scss">
+    @-webkit-keyframes ball-scale-multiple {
+        0% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        10% {
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 0;
+        }
     }
-    @keyframes ani-demo-spin {
-        from { transform: rotate(0deg);}
-        50%  { transform: rotate(180deg);}
-        to   { transform: rotate(360deg);}
+
+    @keyframes ball-scale-multiple {
+        0% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        10% {
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 0;
+        }
     }
-    .demo-spin-col{
-        height: 100px;
+
+    .ball-scale-multiple {
         position: relative;
-        border: 1px solid #eee;
+        -webkit-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        transform: translateY(-30px); }
+    .ball-scale-multiple > div:nth-child(2) {
+        -webkit-animation-delay: 0.2s;
+        animation-delay: 0.2s;
+    }
+    .ball-scale-multiple > div:nth-child(3) {
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+    }
+    .ball-scale-multiple > div {
+        background-color: #4f9dff;
+        border-radius: 100%;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        margin: 0;
+        width: 100px;
+        height: 100px;
+        -webkit-animation: ball-scale-multiple 1s 0s linear infinite;
+        animation: ball-scale-multiple 1s 0s linear infinite;
     }
     .loading{
         width: 100%;
@@ -19,28 +79,28 @@
         position: fixed;
         left:0;
         top:0;
-    }
-    .ivu-spin-show-text{
-        position: absolute;
-        left: 0;
-        right:0;
-        top:0;
-        bottom:0;
+        right: 0;
+        bottom: 0;
         margin: auto;
-        height: 42px;
+        z-index: 10000000000;
+        text-align: center;
+        perspective:120px;
+        transition: all 1s ease;
+    }
+
+    .loading .ball-scale-multiple{
+        position: absolute;
+        left:0;
+        top:0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100px;
+        height: 100px;
     }
 </style>
-<template>
-    <div class="loading">
-        <Spin>
-            <Icon type="load-c" size=18 class="demo-spin-icon-load"></Icon>
-            <div>Loading</div>
-        </Spin>
-    </div>
-</template>
 <script>
-    // 部分样式代码冗长，未作展示
     export default {
-        
+
     }
 </script>
