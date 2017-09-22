@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 const Vuex = resolve => require(['./components/Vuex.vue'], resolve);
 
 const Home = resolve => require(['./components/Home.vue'], resolve);
