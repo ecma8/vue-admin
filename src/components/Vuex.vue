@@ -7,6 +7,11 @@
         <input type="text" v-model="aaa" @keydown.enter="alert()" value="hide">
         <div>现在数字为 {{count}}</div>
         {{isLoading}}
+        <ul>
+            <li v-for="(item,index) in 10" @click="abc(index)">
+                {{item}}
+            </li>
+        </ul>
     </div>
 </template>
 <script>
@@ -38,6 +43,9 @@
             },
             alert(){
                 alert(this.aaa)
+            },
+            abc(a){
+                alert(a)
             }
         },
         mounted(){
