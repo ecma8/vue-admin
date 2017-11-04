@@ -85,7 +85,7 @@
                         this.backClipped = true
                     }
                 } else {
-                    this.backClipped = false
+                    this.backClipped = false;
                     for (let i = (this.current + 1); i < this.pageNo; i++) {
                         ret.push(i)
                     }
