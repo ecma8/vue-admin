@@ -73,8 +73,8 @@
         animation: ball-scale-multiple 1s 0s linear infinite;
     }
     .loading{
-        width: 100%;
-        height: 100%;
+        width: 60%;
+        height: 60%;
         background: #fff;
         position: fixed;
         left:0;

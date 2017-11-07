@@ -1,12 +1,12 @@
 <template>
     <div id='app'>
         <router-view></router-view>
-        <loading v-if="isLoading"></loading>
+        <Loading v-if="isLoading"></Loading>
     </div>
 </template>
 <script>
     import {mapGetters,mapActions} from 'vuex'
-    import Loading from './components/Public/Loading.vue'
+    import Loading from './components/Loading/Loading.vue'
     export default{
         data(){
             return {
@@ -17,7 +17,7 @@
             ...mapGetters(['isLoading'])
         },
         components:{
-            loading:Loading
+
         }
     }
 </script>

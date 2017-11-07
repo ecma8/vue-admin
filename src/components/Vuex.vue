@@ -34,12 +34,15 @@
 
         },
         methods:{
-            ...mapActions(['show','hide']),
+            // ...mapActions(['show','hide']),
             show1(){
-                this.show();
+                this.$store.commit('show');
+//                this.show();
             },
             hide1(){
-                this.hide();
+                this.$store.commit('hide');
+
+//                this.hide();
             },
             alert(){
                 alert(this.aaa)
