@@ -52,7 +52,7 @@
             }
         },
         mounted(){
-            //this.hide1();
+            console.log(this.$route.path)
         }
     }
 </script>

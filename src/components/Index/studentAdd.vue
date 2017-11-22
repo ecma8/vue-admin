@@ -21,7 +21,7 @@
                 <div class="form-group">
                     <label for="" class="col-lg-1 control-label console-color-4"><span class="console-color-3">* </span>学生姓名:</label>
                     <div class="col-lg-4" :class="{'has-error':!status.name}">
-                        <input type="text"  class="form-control" placeholder="" v-model="form.name" @input="check({name:'name',value:form.name, pattern:/^([\u4E00-\uFA29]|[\uE7C7-\uE7F3]|[a-zA-Z0-9_]){2,12}$/})" maxlength="12" minlength="2">
+                        <input type="text"  class="form-control" placeholder="" v-model="form.name" @input="check('name')" maxlength="12" minlength="2">
                     </div>
                     <p class="col-lg-5 console-line-2">
                         2-12位的汉字或英文
@@ -30,7 +30,7 @@
                 <div class="form-group">
                     <label for="" class="col-lg-1 control-label console-color-4">学生昵称:</label>
                     <div class="col-lg-4" :class="{'has-error':!status.nickName}">
-                        <input type="text" class="form-control" placeholder="" v-model="form.nickName" @input="check({name:'nickName', value:form.nickName,pattern:/^([\u4E00-\uFA29]|[\uE7C7-\uE7F3]|[a-zA-Z0-9_]){2,12}$/})" maxlength="12" minlength="2">
+                        <input type="text" class="form-control" placeholder="" v-model="form.nickName" @input="check('nickName')" maxlength="12" minlength="2">
                     </div>
                     <p class="col-lg-5 console-line-2">
                         2-12位的汉字或英文，不填写默认为姓名
@@ -39,7 +39,8 @@
                 <div class="form-group">
                     <label for="" class="col-lg-1 control-label console-color-4"><span class="console-color-3">* </span>登录帐号:</label>
                     <div class="col-lg-4" :class="{'has-error':!status.accounts}">
-                        <input type="text" class="form-control" placeholder=""  v-model="form.accounts" @input="check({name:'accounts', value:form.accounts,pattern:/^\w{6,20}$/})" maxlength="20" minlength="6">
+                        <input type="text" class="form-control" placeholder=""  v-model="form.accounts" @input="check('accounts')"
+ maxlength="20" minlength="6">
                     </div>
                     <p class="col-lg-5 console-line-2">
                         6-20位的字母或数字的组合，推荐使用手机号或邮箱
@@ -48,7 +49,7 @@
                 <div class="form-group">
                     <label for="" class="col-lg-1 control-label console-color-4"><span class="console-color-3">* </span>登录密码:</label>
                     <div class="col-lg-4" :class="{'has-error':!status.password}">
-                        <input type="text" class="form-control" placeholder="" v-model="form.password" @input="check({name:'password', value:form.password,pattern:/^\w{6,20}$/})" maxlength="20" minlength="6">
+                        <input type="text" class="form-control" placeholder="" v-model="form.password" @input="check('name')" maxlength="20" minlength="6">
                     </div>
                     <p class="col-lg-5 console-line-2">
                         6-20位的字母或数字的组合，默认：123456
@@ -93,9 +94,7 @@
                 </div>
             </div>
         </div>
-
     </div>
-
 </template>
 <script>
     export default{
@@ -120,13 +119,19 @@
                     nickName:false,
                     accounts:false,
                     password:true,
+                },
+                pattern:{
+                    name:/^([\u4E00-\uFA29]|[\uE7C7-\uE7F3]|[a-zA-Z0-9_]){2,12}$/,
+                    nickName:/^([\u4E00-\uFA29]|[\uE7C7-\uE7F3]|[a-zA-Z0-9_]){2,12}$/,
+                    accounts:/^\w{6,20}$/,
+                    password:/^\w{6,20}$/,
                 }
             }
         },
         methods:{
             check(data){
 
-                if(data.pattern.test(data.value)){
+                if(this.pattern[data].test(this.form[data])){
 
                     this.status[data.name]=true;
                     return true;

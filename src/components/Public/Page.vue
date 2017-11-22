@@ -23,7 +23,7 @@
                 default: 1
             }
         },
-        data: function () {
+        data() {
             return {
                 // 用于判断省略号是否显示
                 backClipped: true,

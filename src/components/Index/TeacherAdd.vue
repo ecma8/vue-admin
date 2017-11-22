@@ -147,6 +147,15 @@
         watch:{
             'form.name'(val){
                 this.form.nickName=val
+            },
+            '$route' (to, from) {
+
+            }
+        },
+        mounted(){
+            if(this.$route.path=='')
+            {
+
             }
         },
         methods:{

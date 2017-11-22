@@ -54,7 +54,7 @@
                 </tr>
                 </tbody>
                 <tfoot>
-                <tr>
+                <tr>0
                     <td colspan="8">
                         <page :pages=10 :curr=1 v-on:pageIndex="pageIndex"></page>
                         <span>共6页 每页显示五条</span>
