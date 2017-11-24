@@ -52,7 +52,10 @@
             }
         },
         mounted(){
-            console.log(this.$route.path)
+            this.$http.post('http://open.ecma8.com/index.php?c=index&a=phone')
+            .then(response=>{
+                console.log(response)
+            })
         }
     }
 </script>

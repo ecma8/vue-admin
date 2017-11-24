@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 const Vuex = resolve => require(['./components/Vuex.vue'], resolve);
+const Slot = resolve => require(['./components/Slot.vue'], resolve);
+const SlotStatus = resolve => require(['./components/SlotStatus.vue'], resolve);
 
 const Home = resolve => require(['./components/Home.vue'], resolve);
 const Index = resolve => require(['./components/Index.vue'], resolve);
@@ -382,6 +384,17 @@ const routes=[
         path: '/vuex',
         name:'vuex',
         component: Vuex
+    },
+    {
+        path: '/slot',
+        name:'slot',
+        component: Slot
+    }
+    ,
+    {
+        path: '/slot1',
+        name:'slot1',
+        component: SlotStatus
     }
 ];
 

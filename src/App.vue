@@ -1,7 +1,7 @@
 <template>
     <div id='app'>
         <router-view></router-view>
-        <Loading v-if="isLoading"></Loading>
+        <Loading v-if="$store.state.isLoading"></Loading>
     </div>
 </template>
 <script>
@@ -14,7 +14,7 @@
             }
         },
         computed: {
-            ...mapGetters(['isLoading'])
+//            ...mapGetters(['isLoading'])
         },
         components:{
 
