@@ -10,7 +10,7 @@
             <div slot="slot2">hahahhah</div>
             <div slot="slot1">ggggggggggggg</div>
         </rend>
-        <h level="3">123</h>
+        <h level="3">123123123123</h>
         <children>
             <p slot="two">asdsadsad</p>
             <p slot="one">asdsadsad</p>
@@ -81,7 +81,7 @@
                 }
             },
             h:{
-                render: function (createElement) {
+                render:function(createElement) {
                     return createElement(
                         'h' + this.level,   // tag name 标签名称
                         this.$slots.default // 子组件中的阵列
