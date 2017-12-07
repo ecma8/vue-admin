@@ -12,6 +12,8 @@
                 {{item}}
             </li>
         </ul>
+        <button @click="num++">点击显示影藏</button>
+        <vifxxx v-if="num%2===0?true:false"></vifxxx>
     </div>
 </template>
 <script>
@@ -20,7 +22,8 @@
     export default{
         data(){
             return {
-                aaa:'123'
+                aaa:'123',
+                num:0
             }
         },
         watch: {
@@ -31,10 +34,16 @@
             ...mapGetters(['count','isLoading']),
         },
         components:{
-
+            vifxxx:{
+                template:`<p>这是个什么玩意</p>`
+            }
         },
         methods:{
             // ...mapActions(['show','hide']),
+            numadd(){
+                this.num++;
+                console.log(this.num)
+            },
             show1(){
                 this.$store.commit('show');
 //                this.show();

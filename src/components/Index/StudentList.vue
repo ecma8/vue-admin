@@ -18,7 +18,7 @@
                     <input type="text" class="form-control" placeholder="">
                 </div>
                 <div class="form-group col-lg-1">
-                    <input type="button" value="查询" class="btn btn-default" id="123">
+                    <input type="button" value="查询" class="btn btn-default" id="123" @click="search">
                 </div>
                 <div class="form-group pull-right col-lg-1">
                     <router-link :to="{name:'studentAdd'}" class="btn btn-info">添加学生</router-link>

@@ -8,7 +8,6 @@
 import {mapGetters,mapActions} from 'vuex';
 import Footer from '../components/Public/Footer.vue'
 import Nav from '../components/Public/Nav.vue'
-
 export default {
     components: {
         'public-footer': Footer,
@@ -25,7 +24,7 @@ export default {
     methods:{
         ...mapActions(['show','hide']),
 		get(){
-            this.$http.get('/index.php?c=Index&a=phone',{params:{x: 1,y:2}}).then(response => {
+            this.$http.post('/index.php?c=Index&a=phone',this.qs.stringify({x: 1,y:2})).then(response => {
                 console.log(response);
                 this.hide();
             }, response => {
