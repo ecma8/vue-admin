@@ -8,7 +8,7 @@
         <div>现在数字为 {{count}}</div>
         {{isLoading}}
         <ul>
-            <li v-for="(item,index) in 10" @click="abc(index)">
+            <li v-for="(item,index) in 10" @click="abc($event,index)">
                 {{item}}
             </li>
         </ul>
@@ -48,7 +48,7 @@
                 this.$store.commit('show');
 //                this.show();
             },
-            hide1(){
+            hide1(e){
                 this.$store.commit('hide');
 
 //                this.hide();
@@ -56,7 +56,8 @@
             alert(){
                 alert(this.aaa)
             },
-            abc(a){
+            abc(event,a){
+                console.log(event);
                 alert(a)
             }
         },
