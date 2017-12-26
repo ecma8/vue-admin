@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 const Vuex = resolve => require(['./components/Vuex.vue'], resolve);
+const ToDoList = resolve => require(['./components/ToDoList.vue'], resolve);
 const Slot = resolve => require(['./components/Slot.vue'], resolve);
 const SlotStatus = resolve => require(['./components/SlotStatus.vue'], resolve);
 
@@ -384,6 +385,11 @@ const routes=[
         path: '/vuex',
         name:'vuex',
         component: Vuex
+    },
+    {
+        path: '/todoList',
+        name:'todoList',
+        component: ToDoList
     },
     {
         path: '/slot',
