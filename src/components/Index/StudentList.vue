@@ -6,16 +6,14 @@
         <div class="content-right-inner">
             <div class="form-inline console-form-title">
                 <div class="form-group pull-left col-lg-1">
-                    <select id="" class="form-control">
-                        <option value="1">姓名</option>
-                        <option value="2">类型</option>
-                        <option value="3">昵称</option>
-                        <option value="4">帐号</option>
-                        <option value="5">创建日期</option>
+                    <select id="" class="form-control" v-model="selected">
+                        <option :value="item.value" :selected="item.value==selected" v-for="(item,index) in optionList">
+                            {{item.name}}
+                        </option>
                     </select>
                 </div>
                 <div class="form-group col-lg-2">
-                    <input type="text" class="form-control" placeholder="">
+                    <input type="text" class="form-control" placeholder="" v-model="username">
                 </div>
                 <div class="form-group col-lg-1">
                     <input type="button" value="查询" class="btn btn-default" id="123" @click="search">
@@ -98,10 +96,31 @@
                     curr:10,
                     pages:3
                 },
+                optionList:[
+                    {
+                        value:'1',
+                        name:'123'
+                    },
+                    {
+                        value:'2',
+                        name:'456'
+                    },
+                    {
+                        value:'3',
+                        name:'789'
+                    },
+                    {
+                        value:'4',
+                        name:'sss'
+                    },
+                    {
+                        value:'5',
+                        name:'222'
+                    }
+                ],
                 num:10,
-                data:this.$route.query.name,
-                select:''
-
+                username:this.$route.query.name,
+                selected:this.$route.query.type?this.$route.query.type:1
             }
         },
         watch: {
@@ -109,24 +128,25 @@
                 console.log(to.query);
                 console.log(from.query);
             },
-            data(val){
+            username(val){
                 console.log(val)
             }
         },
         components:{
             page:Page
         },
+        created(){
+            console.log(this.$route.query.name);
+            console.log(this.$route.query.type)
+        },
         methods:{
             pageIndex(data){
             },
             search(){
-                this.$router.push({ path:'/student',query: {type:this.select,name: this.data}});
-//                this.num+=10;
-//                this.page.pages=Math.floor(this.num/10)
+                this.$router.push({ path:'/student',query: {type:this.selected,name: this.username}});
             },
             change(){
-
-                this.$router.push({ path:'/student',query: {type:this.select,name: this.data}});
+                this.$router.push({ path:'/student',query: {type:this.selected,name: this.username}});
             }
         }
     }
