@@ -10,7 +10,8 @@
                         {{value}}
                     </option>
                 </select>
-                <input type="button" value="删除" @click="del(index)">
+                <input v-if="index==itemList.length-1" type="button" value="添加" @click="del(index)">
+                <input v-else type="button" value="删除" @click="del(index)">
             </li>
         </ul>
     </div>
@@ -28,16 +29,13 @@
                 itemList:[
                     {
                         id:'admin'
-                    },
-                    {
-                        id:'manager'
                     }
                 ]
             }
         },
         methods:{
             add(){
-                this.itemList.push({
+                this.itemList.unshift({
                     id:'manager'
                 })
             },
