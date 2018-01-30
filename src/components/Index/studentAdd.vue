@@ -49,7 +49,7 @@
                 <div class="form-group">
                     <label for="" class="col-lg-1 control-label console-color-4"><span class="console-color-3">* </span>登录密码:</label>
                     <div class="col-lg-4" :class="{'has-error':!status.password}">
-                        <input type="text" class="form-control" placeholder="" v-model="form.password" @input="check('name')" maxlength="20" minlength="6">
+                        <input type="text" class="form-control" placeholder="" v-model="form.password" @input="check('password')" maxlength="20" minlength="6">
                     </div>
                     <p class="col-lg-5 console-line-2">
                         6-20位的字母或数字的组合，默认：123456
@@ -130,14 +130,13 @@
         },
         methods:{
             check(data){
-
                 if(this.pattern[data].test(this.form[data])){
 
-                    this.status[data.name]=true;
+                    this.status[data]=true;
                     return true;
                 }
                 else{
-                    this.status[data.name]=false;
+                    this.status[data]=false;
                     return false
                 }
             },

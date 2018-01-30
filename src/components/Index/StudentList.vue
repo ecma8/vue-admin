@@ -13,7 +13,7 @@
                     </select>
                 </div>
                 <div class="form-group col-lg-2">
-                    <input type="text" class="form-control" placeholder="" v-model="username">
+                    <input type="text" class="form-control" placeholder="" v-model="username" @input="inputSearch(1,$event)">
                 </div>
                 <div class="form-group col-lg-1">
                     <input type="button" value="查询" class="btn btn-default" id="123" @click="search">
@@ -128,9 +128,9 @@
                 console.log(to.query);
                 console.log(from.query);
             },
-            username(val){
-                console.log(val)
-            }
+//            username(val){
+//                console.log(val)
+//            }
         },
         components:{
             page:Page
@@ -141,6 +141,10 @@
         },
         methods:{
             pageIndex(data){
+            },
+            inputSearch(msg,ev){
+                ev.stopPropagation();
+                console.log(1)
             },
             search(){
                 this.$router.push({ path:'/student',query: {type:this.selected,name: this.username}});
