@@ -43,7 +43,7 @@
 					<img src="../../assets/img/money.svg"  style="width:17px;height: 18px;">
 					<span>账户</span>
 				</li>
-				<li>
+				<li ref="abc">
 					<img src="../../assets/img/message.svg"  style="width: 18px;height: 18px;">
 					<span>消息</span>
 				</li>
@@ -51,3 +51,11 @@
 		</div>
 	</nav>
 </template>
+<script>
+	export default {
+		mounted(){
+	        console.log(window.getComputedStyle(this.$refs.abc).height)
+
+		}
+	}
+</script>
