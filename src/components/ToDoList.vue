@@ -14,6 +14,11 @@
                 <input v-else type="button" value="删除" @click="del(index)">
             </li>
         </ul>
+        <ul>
+            <li v-for="(item,index) in orderTitle" :class="{'li-color':item.type==orderId}" @click="swichNav(item.type)">
+                {{item.name}}
+            </li>
+        </ul>
     </div>
 </template>
 <script>
@@ -30,6 +35,25 @@
                     {
                         id:'admin'
                     }
+                ],
+                orderId:'',
+                orderTitle:[
+                    {
+                        type:'',
+                        name:'全部订单'
+                    },
+                    {
+                        type:'1',
+                        name:'待付款'
+                    },
+                    {
+                        type:'2,3',
+                        name:'已付款'
+                    },
+                    {
+                        type:'99',
+                        name:'已取消'
+                    }
                 ]
             }
         },
@@ -42,6 +66,9 @@
             del(data){
                 console.log(this.itemList);
                 this.itemList.splice(data,1)
+            },
+            swichNav(id){
+                this.orderId=id
             }
         },
         mounted(){
@@ -49,3 +76,16 @@
         }
     }
 </script>
+<style lang="scss">
+    .li-color{
+        background: #00aaff;
+        color: #fff;
+    }
+    ul{
+        overflow: hidden;
+        li{
+            float: left;
+
+        }
+    }
+</style>
